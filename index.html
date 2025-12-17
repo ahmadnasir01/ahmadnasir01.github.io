@@ -3,218 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Web Dev & Data Specialist</title>
+    <title>Portfolio | Data & Web Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    
+    <style>
+        /* --- BLACK, WHITE, RED THEME CSS --- */
+        :root {
+            --bg-color: #000000;         /* Pure Black */
+            --second-bg-color: #111111;  /* Dark Grey */
+            --text-color: #ffffff;       /* Pure White */
+            --main-color: #ff3333;       /* Neon Red */
+            --hover-color: #ff6666;      /* Lighter Red */
+            --font-family: 'Poppins', sans-serif;
+        }
 
-    <div class="animation-area">
-        <ul class="box-area">
-            <li></li><li></li><li></li><li></li><li></li><li></li>
-        </ul>
-    </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: var(--font-family);
+        }
 
-    <nav class="navbar">
-        <div class="logo">Dev<span>Data</span>.</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact" class="btn-primary">Contact Me</a></li>
-        </ul>
-        <div class="menu-btn"><i class="fas fa-bars"></i></div>
-    </nav>
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
 
-    <header id="home" class="hero">
-        <div class="hero-content reveal">
-            <h3>Hello, I am</h3>
-            <h1>Your Name Here</h1>
-            <h2 class="typing-text">I am a <span class="typewriter"></span></h2>
-            <p>Bridging the gap between raw data and digital experiences. I build fast websites and manage complex data with 100% accuracy.</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-secondary">Hire Me</a>
-            </div>
-            
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="hero-image reveal">
-            <div class="img-box">
-                <i class="fas fa-laptop-code"></i>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Efficiency meets Creativity.</h3>
-                    <p>I am a multi-disciplinary freelancer. I don't just build websites; I understand the data that powers them. Whether you need a sleek landing page or a massive Excel database organized, I provide the solution.</p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <h4>2+</h4>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4>50+</h4>
-                            <p>Projects Done</p>
-                        </div>
-                        <div class="stat-box">
-                            <h4>100%</h4>
-                            <p>Accuracy Rate</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section bg-darker reveal">
-        <div class="container">
-            <h2 class="section-title">My <span>Services</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Responsive, fast, and SEO-friendly websites built with HTML, CSS, and Modern JavaScript.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Entry</h3>
-                    <p>High-volume data processing, Excel formulas, CRM management, and data cleaning with precision.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Web Design</h3>
-                    <p>Creating visually appealing layouts and UI/UX designs that capture user attention.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-file-excel"></i>
-                    <h3>Spreadsheet Magic</h3>
-                    <p>Advanced Macros, Pivot Tables, and automated dashboards to visualize your business data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">Latest <span>Projects</span></h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" onclick="openModal('ecommerce')">
-                    <div class="portfolio-img">
-                        <div class="placeholder-img" style="background: #1e293b;">WEB</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>E-Commerce Website</h4>
-                        <p>Click for details</p>
-                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="portfolio-card" onclick="openModal('data')">
-                    <div class="portfolio-img">
-                        <div class="placeholder-img" style="background: #1e293b;">DATA</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Corporate Data Clean-up</h4>
-                        <p>Click for details</p>
-                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="portfolio-card" onclick="openModal('portfolio')">
-                    <div class="portfolio-img">
-                        <div class="placeholder-img" style="background: #1e293b;">WEB</div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h4>Portfolio Template</h4>
-                        <p>Click for details</p>
-                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section bg-darker reveal">
-        <div class="container">
-            <h2 class="section-title">Technical <span>Skills</span></h2>
-            <div class="skills-wrapper">
-                <div class="skill-category">
-                    <h3>Web Dev</h3>
-                    <div class="skill-bar"><div class="info"><span>HTML5</span><span>95%</span></div><div class="line html"></div></div>
-                    <div class="skill-bar"><div class="info"><span>CSS3</span><span>90%</span></div><div class="line css"></div></div>
-                    <div class="skill-bar"><div class="info"><span>JavaScript</span><span>80%</span></div><div class="line js"></div></div>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Handling</h3>
-                    <div class="skill-bar"><div class="info"><span>MS Excel</span><span>98%</span></div><div class="line excel"></div></div>
-                    <div class="skill-bar"><div class="info"><span>Google Sheets</span><span>95%</span></div><div class="line sheets"></div></div>
-                    <div class="skill-bar"><div class="info"><span>Typing Speed (70 WPM)</span><span>100%</span></div><div class="line typing"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section reveal">
-        <div class="container">
-            <h2 class="section-title">Contact <span>Me</span></h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div><h4>Email</h4><p>yourname@email.com</p></div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div><h4>Phone</h4><p>+123 456 7890</p></div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div><h4>Location</h4><p>Your City, Country</p></div>
-                    </div>
-                </div>
-                
-                <form class="contact-form" onsubmit="event.preventDefault(); showSuccessModal();">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Project Details or Data Needs" rows="6" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Copyright &copy; 2025 Your Name. All Rights Reserved.</p>
-    </footer>
-
-    <div id="modal-overlay" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div id="modal-body">
-                </div>
-        </div>
-    </div>
-
-    <div id="success-modal" class="modal-overlay">
-        <div class="modal-content text-center">
-            <i class="fas fa-check-circle" style="color: #06b6d4; font-size: 3rem; margin-bottom: 20px;"></i>
-            <h3>Message Sent!</h3>
-            <p>I will get back to you within 24 hours.</p>
-            <button class="btn-primary" onclick="closeSuccessModal()" style="margin-top: 20px;">Close</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        /* --- ANIMATED BACKGROUND (Red Embers) --- */
+        .animation-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            background: #000;
+        }
+        .box-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .box-area li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 51, 51, 0.15);
+            animation: animate 20s linear infinite;
+            bottom: -150px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(255, 51, 51, 0.3);
+        }
+        .box-area li:nth-child(1) { left: 86%; width: 80px; height: 80px; animation-delay: 0s; }
+        .box-area li:nth-child(2) { left: 12%; width: 30px; height: 30px; animation-delay: 1.5s; animation-duration: 10s; }
+        .box-area li:nth-child(3) { left: 70%; width: 100px; height: 100px; animation-delay
