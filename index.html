@@ -1,139 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmad Nasir | Professional Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family: 'Roboto', sans-serif; background:#f0f2f5; color:#333;}
-
-    /* Header */
-    header {background: linear-gradient(90deg,#4f46e5,#6366f1); color:white; padding:60px 20px; text-align:center; position:relative; overflow:hidden;}
-    header h1 {font-size:3rem; animation: slideIn 1s forwards;}
-    header p {margin-top:10px; font-size:1.3rem; animation: fadeIn 2s forwards;}
-
-    @keyframes slideIn {from {transform: translateY(-100px); opacity:0;} to {transform: translateY(0); opacity:1;}}
-    @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
-
-    /* Sections */
-    section {padding:80px 20px; max-width:1200px; margin:auto; position:relative;}
-    h2 {font-size:2rem; margin-bottom:20px; color:#1f2937; text-align:center;}
-
-    /* Cards */
-    .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-    .card {background:white; padding:25px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer;}
-    .card:hover {transform: translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.15);}
-
-    /* Buttons */
-    .btn {display:inline-block; padding:12px 25px; background:#4f46e5; color:white; border-radius:8px; text-decoration:none; transition:0.3s;}
-    .btn:hover {background:#6366f1;}
-
-    /* Pop-up modal */
-    .modal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:1000;}
-    .modal-content {background:white; padding:30px; border-radius:10px; max-width:500px; text-align:center; position:relative;}
-    .close {position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer;}
-
-    /* Contact Form */
-    form {display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto;}
-    input, textarea {padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1rem;}
-    textarea {resize:none;}
-
-    /* Animations */
-    .fade-up {opacity:0; transform: translateY(30px); transition: all 0.8s ease;} 
-    .fade-up.show {opacity:1; transform: translateY(0);}
-
-    footer {background:#1f2937; color:white; text-align:center; padding:25px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Web Dev & Data Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Ahmad Nasir</h1>
-  <p>Professional Data Entry & Web Solutions</p>
-  <a href="#contact" class="btn">Hire Me</a>
-</header>
+    <nav class="navbar">
+        <div class="logo">Dev<span>Data</span>.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact" class="btn-primary">Contact Me</a></li>
+        </ul>
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">I am a dedicated Data Entry Specialist and Website Creator who provides **accurate, fast, and reliable services**. I help businesses stay organized with data solutions and build **modern, responsive websites** that engage users.</p>
-</section>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h3>Hello, I am</h3>
+            <h1>Your Name Here</h1>
+            <h2 class="typing-text">I am a <span class="typewriter"></span></h2>
+            <p>Bridging the gap between raw data and digital experiences. I build fast websites and manage complex data with 100% accuracy.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Hire Me</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="img-box">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </div>
+    </header>
 
-<section id="services">
-  <h2>My Services</h2>
-  <div class="grid">
-    <div class="card" onclick="openModal('Data Entry')">Data Entry</div>
-    <div class="card" onclick="openModal('Web Research')">Web Research</div>
-    <div class="card" onclick="openModal('PDF Conversion')">PDF to Excel/Word</div>
-    <div class="card" onclick="openModal('Website Design')">Website Design</div>
-    <div class="card" onclick="openModal('Excel Formatting')">Advanced Excel</div>
-    <div class="card" onclick="openModal('Virtual Assistance')">Virtual Assistance</div>
-  </div>
-</section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Efficiency meets Creativity.</h3>
+                    <p>I am a multi-disciplinary freelancer. I don't just build websites; I understand the data that powers them. Whether you need a sleek landing page or a massive Excel database organized, I provide the solution.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h4>2+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>50+</h4>
+                            <p>Projects Done</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>100%</h4>
+                            <p>Accuracy Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card fade-up">Data Entry</div>
-    <div class="card fade-up">Microsoft Excel</div>
-    <div class="card fade-up">Google Sheets</div>
-    <div class="card fade-up">WordPress</div>
-    <div class="card fade-up">HTML & CSS</div>
-    <div class="card fade-up">Responsive Design</div>
-  </div>
-</section>
+    <section id="services" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Responsive, fast, and SEO-friendly websites built with HTML, CSS, and Modern JavaScript.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Entry</h3>
+                    <p>High-volume data processing, Excel formulas, CRM management, and data cleaning with precision.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Web Design</h3>
+                    <p>Creating visually appealing layouts and UI/UX designs that capture user attention.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-excel"></i>
+                    <h3>Spreadsheet Magic</h3>
+                    <p>Advanced Macros, Pivot Tables, and automated dashboards to visualize your business data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form onsubmit="submitForm(event)">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button class="btn" type="submit">Send Message</button>
-  </form>
-</section>
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Latest <span>Projects</span></h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <div class="placeholder-img" style="background: #1e293b;">WEB</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>E-Commerce Website</h4>
+                        <p>A full responsive store layout.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <div class="placeholder-img" style="background: #1e293b;">DATA</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Corporate Data Clean-up</h4>
+                        <p>Organized 10,000+ entry database.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-img">
+                        <div class="placeholder-img" style="background: #1e293b;">WEB</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Portfolio Template</h4>
+                        <p>Personal portfolio for a client.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>© 2025 Ahmad Nasir | All Rights Reserved</p>
-</footer>
+    <section id="skills" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Web Dev</h3>
+                    <div class="skill-bar"><div class="info"><span>HTML5</span><span>95%</span></div><div class="line html"></div></div>
+                    <div class="skill-bar"><div class="info"><span>CSS3</span><span>90%</span></div><div class="line css"></div></div>
+                    <div class="skill-bar"><div class="info"><span>JavaScript</span><span>80%</span></div><div class="line js"></div></div>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Handling</h3>
+                    <div class="skill-bar"><div class="info"><span>MS Excel</span><span>98%</span></div><div class="line excel"></div></div>
+                    <div class="skill-bar"><div class="info"><span>Google Sheets</span><span>95%</span></div><div class="line sheets"></div></div>
+                    <div class="skill-bar"><div class="info"><span>Typing Speed (70 WPM)</span><span>100%</span></div><div class="line typing"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Modal -->
-<div class="modal" id="serviceModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalText">I provide professional services to make your project fast, accurate, and high-quality.</p>
-  </div>
-</div>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>yourname@email.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Project Details or Data Needs" rows="6" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<script>
-  // Pop-up modal functions
-  function openModal(title){
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('serviceModal').style.display = 'flex';
-  }
-  function closeModal(){
-    document.getElementById('serviceModal').style.display = 'none';
-  }
+    <footer>
+        <p>Copyright &copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
 
-  // Scroll fade-up animation
-  const faders = document.querySelectorAll('.fade-up');
-  const appearOptions = {threshold: 0.1, rootMargin: '0px 0px -50px 0px'};
-  const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-      if(entry.isIntersecting){entry.target.classList.add('show'); observer.unobserve(entry.target);}
-    });
-  }, appearOptions);
-  faders.forEach(fader => appearOnScroll.observe(fader));
-
-  // Contact form simulation
-  function submitForm(e){
-    e.preventDefault();
-    alert('Thank you! Your message has been sent.');
-    e.target.reset();
-  }
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
