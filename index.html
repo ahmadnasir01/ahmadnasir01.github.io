@@ -10,6 +10,12 @@
 </head>
 <body>
 
+    <div class="animation-area">
+        <ul class="box-area">
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
+    </div>
+
     <nav class="navbar">
         <div class="logo">Dev<span>Data</span>.</div>
         <ul class="nav-links">
@@ -23,7 +29,7 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content reveal">
             <h3>Hello, I am</h3>
             <h1>Your Name Here</h1>
             <h2 class="typing-text">I am a <span class="typewriter"></span></h2>
@@ -39,14 +45,14 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image reveal">
             <div class="img-box">
                 <i class="fas fa-laptop-code"></i>
             </div>
         </div>
     </header>
 
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <div class="container">
             <h2 class="section-title">About <span>Me</span></h2>
             <div class="about-content">
@@ -73,7 +79,7 @@
         </div>
     </section>
 
-    <section id="services" class="section bg-darker">
+    <section id="services" class="section bg-darker reveal">
         <div class="container">
             <h2 class="section-title">My <span>Services</span></h2>
             <div class="services-grid">
@@ -101,45 +107,45 @@
         </div>
     </section>
 
-    <section id="portfolio" class="section">
+    <section id="portfolio" class="section reveal">
         <div class="container">
             <h2 class="section-title">Latest <span>Projects</span></h2>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openModal('ecommerce')">
                     <div class="portfolio-img">
                         <div class="placeholder-img" style="background: #1e293b;">WEB</div>
                     </div>
                     <div class="portfolio-info">
                         <h4>E-Commerce Website</h4>
-                        <p>A full responsive store layout.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <p>Click for details</p>
+                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openModal('data')">
                     <div class="portfolio-img">
                         <div class="placeholder-img" style="background: #1e293b;">DATA</div>
                     </div>
                     <div class="portfolio-info">
                         <h4>Corporate Data Clean-up</h4>
-                        <p>Organized 10,000+ entry database.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <p>Click for details</p>
+                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openModal('portfolio')">
                     <div class="portfolio-img">
                         <div class="placeholder-img" style="background: #1e293b;">WEB</div>
                     </div>
                     <div class="portfolio-info">
                         <h4>Portfolio Template</h4>
-                        <p>Personal portfolio for a client.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        <p>Click for details</p>
+                        <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section bg-darker">
+    <section id="skills" class="section bg-darker reveal">
         <div class="container">
             <h2 class="section-title">Technical <span>Skills</span></h2>
             <div class="skills-wrapper">
@@ -159,35 +165,26 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
         <div class="container">
             <h2 class="section-title">Contact <span>Me</span></h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>yourname@email.com</p>
-                        </div>
+                        <div><h4>Email</h4><p>yourname@email.com</p></div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+123 456 7890</p>
-                        </div>
+                        <div><h4>Phone</h4><p>+123 456 7890</p></div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Your City, Country</p>
-                        </div>
+                        <div><h4>Location</h4><p>Your City, Country</p></div>
                     </div>
                 </div>
                 
-                <form class="contact-form">
+                <form class="contact-form" onsubmit="event.preventDefault(); showSuccessModal();">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
                     <textarea placeholder="Your Project Details or Data Needs" rows="6" required></textarea>
@@ -198,8 +195,25 @@
     </section>
 
     <footer>
-        <p>Copyright &copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>Copyright &copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content text-center">
+            <i class="fas fa-check-circle" style="color: #06b6d4; font-size: 3rem; margin-bottom: 20px;"></i>
+            <h3>Message Sent!</h3>
+            <p>I will get back to you within 24 hours.</p>
+            <button class="btn-primary" onclick="closeSuccessModal()" style="margin-top: 20px;">Close</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
