@@ -7,7 +7,7 @@ menuBtn.addEventListener('click', () => {
 });
 
 // Typing Animation logic
-const texts = ["Data Entry Specialist", "Web Developer", "Spreadsheet Expert", "UI/UX Designer"];
+const texts = ["C++", "Web Developer", "Certified Anas ka Thoku", "UI/UX Designer"];
 let count = 0;
 let index = 0;
 let currentText = "";
